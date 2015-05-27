@@ -18,6 +18,6 @@ _require('routes')(app)
 
 models.sequelize.sync().then ->
   require('http').createServer(app).listen config.port, config.ip, ()->
-    console.log 'Domain Service listening on %d, in %s mode', config.port, app.get('env')
+    console.log 'Node server listening on %d, in %s mode', config.port, app.get('env')
 
 exports = module.exports = app
